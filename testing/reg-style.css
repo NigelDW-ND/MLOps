@@ -1,0 +1,149 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	font-family: Corbel;
+}
+
+body{background-color: #e5f9ff}
+
+/* registrationp1 */
+
+.content{
+	padding-top:2%; 
+	padding-bottom:2%; 
+	padding-right:10%;
+	padding-left:10%;
+	margin-top: 1%;
+	margin-bottom: 2%;
+	margin-left:15%;
+	margin-right:15%;
+	align-items: center;
+	width: 55%;
+	border: none;
+	border-radius: 15px;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
+}
+
+.form-content{width: 80%;
+              position: relative;
+			  left: 10%;}
+
+
+#heading{width: 100%;
+text-align: center;}
+
+label{display: inline-block;}
+
+select{border-radius: 12px;
+       width: 255px;
+	float: right;
+}
+
+input{border-radius: 12px;
+       width: 250px;
+	border: 1px solid grey;
+	outline: none;
+	float: right;}
+
+input:focus{ border:none;
+	         margin:2px;
+	         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+
+
+#btn_user_reg{	position: absolute;
+	left:25%;
+	border-radius: 25px;
+	height: 35px;
+	width: 300px;
+	border: none;
+	background-color: #007197;
+	color: white;
+	outline: none;
+	font-size: 1.2em;}
+
+#btn_user_reg:hover	{width: 300px;
+	border: none;
+	background-color: #007197;
+	color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+
+/* regstart */
+
+.email_reset{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: #e5f9ff;
+	width: 850px;
+	height: 380px;
+	border-radius: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	align-items: center;
+	padding-top:15px;
+	padding-bottom: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+
+}
+  
+.email_reset form {
+	align-items: center;
+	padding-top:15px;
+	padding-bottom: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+
+}
+
+#msg_email{
+	position: absolute;
+	left:8%;
+	font-size: 1.3em;
+	
+}
+
+
+.user_email{
+	position: absolute;
+	left:18%;
+	top:68%;
+	border: 1px solid #ccc;
+	border-radius: 25px;
+	height: 35px;
+	width: 600px;
+	padding-left: 15px;
+	font-size: 1.2em;
+	
+}
+.user_email:focus {
+	outline: none;
+	border: 1px solid #799900;
+	opacity: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
+}
+#btn_user_email{
+	position: absolute;
+	left:35%;
+	top:83%;
+	border-radius: 25px;
+	height: 35px;
+	width: 300px;
+	border: none;
+	background-color: #007197;
+	color: white;
+	outline: none;
+	font-size: 1.2em;
+}
+#btn_user_email:hover{
+	width: 300px;
+	border: none;
+	background-color: #007197;
+	color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

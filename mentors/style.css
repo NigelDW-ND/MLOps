@@ -1,0 +1,118 @@
+/*  Modal _____________________________________________________________________*/
+.modal-content{
+	border-radius:15px;
+	width: 70%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding: 0 0 1% 0;
+}
+
+.modal-header h2{
+	background-color: #007197;
+	color: white;
+	border-radius: 15px 15px 0px 0px;
+	padding: 1%;
+	
+}
+
+.modal-body{
+	padding:1%;
+}
+
+.modal-body select {
+	border: 1px solid #ddd;
+	border-radius: 15px;
+	padding: 3px;
+	outline: none;
+}
+
+.modal-body select:focus{
+	border: 1px solid #799900;
+	border-radius: 15px;
+	padding: 3px;
+	outline: none;
+}
+
+.modal-body input{
+	border: 1px solid #ddd;
+	border-radius: 15px;
+	padding: 3px;
+	outline: none;
+}
+
+.modal-body input:focus{
+	border: 1px solid #799900;
+	border-radius: 15px;
+	padding: 3px;
+}
+
+#mcCloseModalBtn{
+	background:#007197; 
+	color: white;
+	border: none;
+	border-radius:15px;
+	padding: 5px;
+
+}
+
+#mcCloseModalBtn:hover{
+	background: white;
+	color: #007197;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#mmsCloseModalBtn{
+	background:#007197; 
+	color: white;
+	border: none;
+	border-radius:15px;
+	padding: 5px;
+
+}
+
+#mmsCloseModalBtn:hover{
+	background: white;
+	color: #007197;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+.addsubmit{
+	background:#007197; 
+	color: white;
+	border: none;
+	border-radius:15px;
+	padding: 5px;
+	
+}
+
+.addsubmit:hover{
+	background: white;
+	color: #007197;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.upsubmit{
+	background:#007197; 
+	color: white;
+	border: none;
+	border-radius:15px;
+	padding: 5px;
+	
+}
+
+.upsubmit:hover{
+	background: white;
+	color: #007197;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+
+/*_____________________________________________________________*/
+
+
+
+

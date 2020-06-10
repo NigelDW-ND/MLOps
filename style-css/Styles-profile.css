@@ -1,0 +1,647 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+
+font: Corbel
+Blue: #007197 
+pastle blue :#89b9c9
+Green: #799900
+
+*/
+body{
+	background-color: #89b9c9;
+	margin: 0;
+	padding: 0;
+		
+}
+
+*{
+	font-family: Corbel;
+}
+ /* Container ___________________________________________________*/
+
+.container{
+	filter:blur(0px);
+	background-color: white;
+	margin: 2% 5% 2% 5%;
+	padding: 30px 30px 30px 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	color: #343434;
+	border-radius: 30px;
+	
+}
+ 	/* NavBar*/
+
+.nav button{
+	border: none;
+	color: #5e5e5e;
+	position:relative;
+	display: inline-block;
+	top:30px;
+	font-size: 16px;
+	left: -20%;
+	padding: 5px 5px 5px 5px;
+	outline: none;
+	background-color:white;
+	
+}
+
+input[type="button"]{
+	outline: none;
+}
+
+.navbar{float:right;}
+
+nav ul{
+	display: flex;
+}
+
+nav ul li{
+	list-style: none; 
+}
+
+.nav button:hover{
+	color:#799900;
+	font-size:17px;
+}
+
+
+
+/* Mentor alerts __________________________________________*/
+
+.data-table-display{
+	margin: 1%;
+	border: 1px solid #007197;
+	border-radius: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	height: auto;
+	width: 48%
+	padding:10px 5px 20px 5px;
+	display: block;
+}
+
+.Table-Content-Section{
+	margin:0;
+	width: 100%;
+	background-color: white;
+	color: #007197;
+	border-collapse: collapse;
+	padding:0px 0px 0px 0px;
+}
+
+.Table-Content-Body-Section{
+	display: block;
+	max-height: 130px;	
+	overflow: auto;
+}
+
+.tableNoRows{
+	font-size:20px;
+	color:red;
+}
+
+#Mentor-Alerts-Top{	
+	display: inline-block;
+	position: relative;
+	top: -10px;
+	left:5px;
+}
+
+#Mentor-Announcements-Top{
+	display: inline-block;
+	position: relative;
+	top: -10px;
+	left:10px;	
+}
+
+th, td{
+	border-bottom: 1px solid #ddd;
+	font-size: small;
+}
+
+.tableBodyRow:hover{	
+	color:#007197;
+	background:#00719724;
+
+}
+
+.tableHeaderRow{	
+	color:white;
+	background:#007197;
+
+}
+
+.modal-submit-section{
+	border: none;
+}
+
+.addbtn {
+	float:right;	
+	border-radius: 10px;
+	background-color:white;	
+	border-color: #007197;
+}
+
+.addbtn:hover {				
+	background-color:#e6ffff;
+}
+
+.addbtn:active {				
+	background-color:#80ffff;
+}
+
+.addsubmit {	
+	border-radius: 10px;
+	background-color:white;	
+	border-color: #007197;
+}
+
+.addsubmit:hover {				
+	background-color:#e6ffff;
+}
+
+
+/*----         Modal Section       -----*/ 
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+
+.modal-content{
+	border-radius:15px;
+	background-color: #fefefe;
+	margin: auto;
+	width: 40%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding: 0 0 1% 0;
+}
+
+.modal-header{
+	background-color: #007197;
+	color: white;
+	border-radius: 15px 15px 0px 0px;
+	padding: 0px 0px 0px 10px;
+	
+}
+
+.modal-body{
+	padding:1%;
+}
+
+.modal-body select{
+	width:150px;F
+}
+
+.modal-body-input{
+	border: 1px solid #ddd;
+	border-radius: 15px;
+	padding: 3px;
+	outline: none;
+}
+
+.modal-body-input:focus{
+	border: 1px solid #07a3a0;
+	border-radius: 15px;
+	padding: 3px;
+}
+
+#mcCloseModalBtn{
+	background:#007197; 
+	color: white;
+	border: none;
+	border-radius:15px;
+	padding: 5px;
+
+}
+
+#mcCloseModalBtn:hover{
+	background: white;
+	color: #007197;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#mmsCloseModalBtn{
+	background:#007197; 
+	color: white;
+	border: none;
+	border-radius:15px;
+	padding: 5px;
+
+}
+
+#mmsCloseModalBtn:hover{
+	background: white;
+	color: #007197;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.addBtnGroup {
+	float:right;
+}
+
+
+
+.upsubmit {	
+	border-radius: 10px;
+	background-color:white;	
+	border-color: #007197;
+}
+
+.PageButton{
+	border: none;
+	background: #799900;
+	color: white;
+	border-radius: 15px;
+	width: 80px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.PageButtonSelected {
+	border: none;
+	background: #007197;
+	color: white;
+	border-radius: 15px;
+	width: 80px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.PageButton:hover{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	cursor: pointer;
+}
+
+/* Table columns */
+
+.SBusCol{
+	width: 20%
+}
+.SSubCol{
+	width: 10%
+}
+.SDescCol{
+	width: 45%
+}
+.SICCol{
+	width: 5%
+}
+.SDateCol{
+	width: 10%
+}
+.SActionCol{
+	width: 10%
+}
+
+/* Dropdown box */
+
+.mentorDropDownBox {
+	border-radius: 15px;
+	background-color: #007197;
+	color: white;
+	width:100px;
+	padding: 4px;
+	border: none;
+	font-size: 14px;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+	-webkit-appearance: button;
+	appearance: button;
+	outline: none;
+}
+option{
+	border-radius: 15px;
+}
+.mentorDropDownBox:hover{
+  /*color: rgba(255, 255, 255, 0.6);*/
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #007197;
+}
+
+/* Page buttons section */
+
+.pagination{
+	padding:10px 0px 0px 0px;
+}
+
+/* submit buttons */
+
+.addsubmit, .upsubmit, .FilterBtn{
+	border:none;
+	background: #007197;
+	color: white;
+	width: 80px;
+	height: 25px;
+	outline: none;
+	border-radius: 15px;
+}
+
+.addsubmit:hover, .upsubmit:hover, .FilterBtn:hover{
+	border:none;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	color: #007197;
+	background: white;
+
+}
+
+/* Mentor Home page ----------------------------------------------------------------*/
+
+#mhCloseModalBtn{
+	border:none;
+	background: #007197;
+	color: white;
+	width: 80px;
+	height: 25px;
+	outline: none;
+	border-radius: 15px;
+}
+
+#mhCloseModalBtn:hover{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	color: #007197;
+	background: white;
+
+}
+
+/*Mentor-Announcements---------------------------------------------------------- */
+
+
+.viewANBtn{
+	border:none;
+	background: #007197;
+	color: white;
+	width: 80px;
+	height: 25px;
+	outline: none;
+	border-radius: 15px;
+}
+
+.viewANBtn:hover{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	color: #007197;
+	background: white;
+
+}
+
+/*Add session________________________________________________________*/
+#Mentor-Sessions-Top{
+	overflow: hidden;
+	padding:10px;
+}
+
+
+#addModalMSBtn{
+	border:none;
+	background: #007197;
+	color: white;
+	width: 100px;
+	height: 25px;
+	outline: none;
+	border-radius: 15px;
+	float:right;
+}
+
+#addModalMSBtn:hover{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	color: #007197;
+	background: white;
+
+}
+
+/*Edit button________________________________*/
+
+.editMSBtn{
+	border:none;
+	background: #007197;
+	color: white;
+	width: 70px;
+	height: 25px;
+	outline: none;
+	border-radius: 15px;
+}
+.editMSBtn:hover{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	color: #007197;
+	background: white;
+
+}
+.editMSBtnDis{
+	border:none;
+	background: grey;
+	color: white;
+	width: 70px;
+	height: 25px;
+	outline: none;
+	border-radius: 15px;
+}
+
+/*Milestones_________________________________________________________________________*/
+
+#Mentor-Milestones-Top{
+	overflow: hidden;
+	padding:10px;
+}
+
+
+#addModalMMSBtn{
+	border:none;
+	background: #007197;
+	color: white;
+	width: 120px;
+	height: 25px;
+	outline: none;
+	border-radius: 15px;
+	float:right;
+}
+
+#addModalMMSBtn:hover{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	color: #007197;
+	background: white;
+
+}
+
+/*Edit button________________________________*/
+
+.editMMSBtn{
+	border:none;
+	background: #007197;
+	color: white;
+	width: 70px;
+	height: 25px;
+	outline: none;
+	border-radius: 15px;
+}
+.editMMSBtn:hover{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	color: #007197;
+	background: white;
+
+}
+.editMMSBtnDis{
+	border:none;
+	background: grey;
+	color: white;
+	width: 70px;
+	height: 25px;
+	outline: none;
+	border-radius: 15px;
+}
+
+/*Mentor Claims _______________________________________________________________________________________*/
+#Mentor-Claims-Top{
+	overflow: hidden;
+	padding:10px;
+}
+
+
+#addModalMCBtn{
+	border:none;
+	background: #007197;
+	color: white;
+	width: 120px;
+	height: 25px;
+	outline: none;
+	border-radius: 15px;
+	float:right;
+}
+
+#addModalMCBtn:hover{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	color: #007197;
+	background: white;
+
+}
+
+/*Edit button________________________________*/
+
+.editMCBtn{
+	border:none;
+	background: #007197;
+	color: white;
+	width: 70px;
+	height: 25px;
+	outline: none;
+	border-radius: 15px;
+}
+.editMCBtn:hover{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	color: #007197;
+	background: white;
+
+}
+.editMCBtnDis{
+	border:none;
+	background: grey;
+	color: white;
+	width: 70px;
+	height: 25px;
+	outline: none;
+	border-radius: 15px;
+}
+
+/*Mentor business _______________________________________________________________________________________*/
+
+.business-table-display{
+	border-radius: 15px;
+	border: 1px solid #007197;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	min-width: 50%;
+	max-width: 70%;
+	float: right;
+	/*height: inherit;*/
+	margin: 1%;
+	padding: 1%;
+	text-align: center;
+}
+
+#profiles-section{
+	
+}
+
+#mentor-profile-section{
+	margin:0;
+	width: 100%;
+	background-color: white;
+	color: #007197;
+	border-collapse: collapse;
+}
+
+#mentor-liaison-profile-section{
+	margin:0;
+	background-color: white;
+	color: #007197;
+	border-collapse: collapse;
+}
+
+
+.Table-Content-Section th{
+	text-align: left;
+}
+
+#mentor-liaison-profile{
+	border-radius: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	margin: 1%;
+	padding: 1.5%;
+	width: 22%;
+	border: 1px solid #007197;	
+}
+
+#mentor-profile{
+	border-radius: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	margin: 1%;
+	padding: 1.5%;
+	width: 22%;
+	border: 1px solid #007197;
+}
+
+#mentor-business-profiles{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.mentor-profile-box{
+	max-width: 490px;
+	height: auto;
+	margin: 10px;
+	flex: 1 1 500px;	
+	border-radius: 15px;
+	border: 1px solid #007197;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

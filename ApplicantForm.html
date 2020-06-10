@@ -1,0 +1,809 @@
+<!doctype html>
+
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>Fetola Application Form</title>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link href="Style-css/inputCss.css" rel="stylesheet">
+	
+	<style>
+	body{
+		font-family: "Trebuchet MS", sans-serif;
+		margin: 50px;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	select {
+		width: 200px;
+	}
+	</style>
+</head>
+<body>
+<img src="logo.png" style="width:250px;height:100px;"><br>
+
+<!-- Tabs -->
+<h2 class="demoHeaders">Application Form</h2>
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Personal Details</a></li>
+		<li><a href="#tabs-2">Enterprise Details</a></li>
+		<li><a href="#tabs-3">Business Overview</a></li>
+		<li><a href="#tabs-4">Employment Details</a></li>
+	</ul>
+	<div id="tabs-1"><form action="ApplicantForm.php" method="post">
+		<input type="hidden" name="thischampaige" value="Fetola2020">
+		
+<!---------------------------------------------------------------------------------------------------------------------------------------SECTION 1 : Personal details ------->		
+			
+	  <p>
+	    <label style="width:350px; display: inline-block;">Title :</label> 		
+	    <select id="title" name="title" required>
+			  <option></option>
+			  <option value="Mr">Mr.</option>
+			  <option value="Mrs">Mrs.</option>
+			  <option value="Ms">Ms.</option>		
+        </select>
+		<lable id="title-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>  
+		<br> 
+		 <div> 
+	    <lable>First Name :</lable>		
+	    <input type="text" id="firstname" name="firstname" style="width:500px;" data-validation="length required" data-validation-length="min2" required>
+		 <lable id="firstname-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+			</div> 
+		  <br>
+	    <lable>Last Name :</lable>		
+	    <input type="text" id="lastname" name="lastname" style="width:500px;" required>
+		<lable id="lasttname-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+	   </p>
+		
+	   <p>
+		
+		  <lable>Gender :</lable>
+		  <select id="gender" name="gender" required>
+			    <option></option>
+				<option value="male" >Male</option>
+				<option value="female">Female</option>  
+		  </select>
+		   <lable id="gender-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+		     <br><br> 
+		  <lable>Ethnicity :</lable>
+		  <select id="ethnicity" name="ethnicity" required>
+			    <option></option>
+				<option value="black">Black</option>
+				<option value="white">White</option>
+			    <option value="coloured">Coloured</option>
+				<option value="indian">Indian/Asian</option>
+		  </select> 
+		   <lable id="ethnicity-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+		     <br><br> 
+		  <lable>Date of Birth :</lable>
+		    <input type="date" id="dateofbirth" name="dateofbirth" style="width:500px;" reqired><br><br>
+		  <lable>Do you have a disability?</lable>
+		   <select id="disability" name="disability" required>
+			    <option></option>
+			    <option value="no">No</option>
+				<option value="yes">Yes</option>
+			   
+		  </select> 
+		   <lable id="disabiliy-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+		   
+	      </p>
+		  
+		  <p>
+			  
+			  <lable>If yes,provide further infomation :</lable>
+			  <input type="text" id="disabilityinfo" name="disabilityinfo" style="width:500px; height: 40px" required>
+			  <lable id="disability-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+			  </br></br>
+			  <lable>Email Address:</lable>
+			  <input type="text" id="email" name="email" style="width:500px;" data-validation="email required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="example@business.com">
+	          <lable id="email-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+			  </br></br>
+	          <lable>Phone number :</lable>
+			  <input type="text" id="phonenumber" name="phonenumber" style="width:500px;" required>
+              <lable id="phonenumber-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+	          </br></br>
+			  <lable>Alternative number :</lable>
+			  <input type="text" id="altnumber" name="altnumber" style="width:500px;" required>
+              <lable id="altnumber-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+			  <br><br>
+			  <lable>I.D. or Passport Number :</lable>
+			  <input type="text" id="idnumber" name="idnumber" style="width:500px;" maxlength="13" required >
+              <lable id="id-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+			  </br></br>
+              <lable>Are you a south African citizen?</lable>
+		   		<select id="citizen" name="citizen" required >
+					<option></option>
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+			   
+		  		</select>
+                <lable id="citizen-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+               </br></br>
+     		  <lable>If no,please provide further infomation :</lable>
+			  <input type="text" id="citizeninfo"  name="citizeninfo" style="width:500px;" required >
+              <lable id="citizeninfo-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+	          </br></br>
+   			  <lable>Street Address : </lable>
+			  <input type="text"  id="address" name="address" style="width:500px;" required>
+              <lable id="address-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+			  </br></br>
+			  <lable>Address line 2 :</lable>
+			  <input type="text" id="address2" name="address2" style="width:500px;" required>
+			  </br></br>
+			  <lable>City :</lable>
+			  <input type="text" id="city" name="city" style="width:500px;" required>
+              <lable id="city-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+              </br></br>
+              <lable>Province :</lable>
+			  <select id="province" name="province" required>
+			  <option></option>	  
+              <option value="Gauteng">Gauteng</option>
+			  <option value="Mpumalanga">Mpumalanga</option>
+			  <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+			  <option value="North West">North West</option>
+			  <option value="Limpopo">	Limpopo</option>
+			  <option value="Western Cape">Western Cape</option>
+			  <option value="Free State">Free State</option>
+			  <option value="Eastern Cape">Eastern Cape</option>
+			  <option value="Northern Cape">Northern Cape</option>
+			  </select>	
+              <lable id="province-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+			  </br></br>
+			  <lable>Postal Code :</lable>
+			  <input type="text" id="postalcode" name="postalcode" required>
+              <lable id="postal-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+              </br></br>
+			  <lable>How did you first hear about the program?</lable>
+			  <select type="text" id="program" name="program" required>
+		  		
+				<option></option>	
+				<option value="fcr">Friend/Relative/Colleague</option>
+				<option value="newspaper">Newspaper</option>
+			    <option value="online">Online</option>
+			    <option value="radio">Radio</option>
+			    <option value="social">Social Media (Facebook, Twitter, Instagram</option>
+			    <option value="other">Other</option>
+			  </select></br></br>
+              <lable>If other, please specify:</lable>
+              </br>
+              <lable></lable>
+              <textarea rows="5" type="text" name="programother" style="width:550px; " ></textarea>
+			  
+			  
+		  </p>
+          <p>
+			<lable style="width:800px">Next of Kin details (ie, close relative, friend or business partner) for use incase of an emergency.</lable> 
+			</br></br>
+            <lable>First Name :</lable>		
+	    	<input type="text" id="kinfirstname" name="kinfirstname" style="width:500px;" required>
+            <lable id="kinfirstname-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+            </br></br>
+	    	<lable>Last Name :</lable>		
+	    	<input type="text" id="kinlastname" name="kinlastname" style="width:500px;" required>
+            <lable id="kinlastname-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+            </br></br>
+            <lable>Relationship :</lable>
+		  		<select id="relationship" name="relationship" required>
+				<option></option>	
+				<option value="relative">Relative</option>
+				<option value="friend">Friend</option>
+			    <option value="businesspartner">Business partner</option>
+							
+		 		</select>
+                 <lable id="relationship-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+                </br></br>
+              <lable>Email Address :</lable>
+			  <input type="text" id="kinemail" name="kinemail" style="width:500px;"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="example@business.com">
+              <lable id="kinemail-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+			  </br></br>
+	          <lable>Phone number :</lable>
+			  <input type="text" id="kinphonenumber" name="kinphonenumber" style="width:500px;" required>
+              <lable id="kinnumber-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>  
+		      </div>
+
+<!---------------------------------------------------------------------------------------------------------------------------------------SECTION 2 : Enterprise details ------->
+
+
+	<div id="tabs-2"><lable>Registered name of the enterprise :</lable>
+	<input type="text" id="entname" name="entname" style="width:550px;" required>
+	<lable id="ent-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable> 	
+	<br><br>
+	<lable>Enterise trading name -if different :</lable>
+	<input type="text" id="enttradename" name="enttradename" style="width:550px;" required>
+    <lable id="enttradename-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable> 
+	<br><br>
+	<lable>Type of Enterprise:</lable>
+	<select name="groups" required>
+		<option value=" "></option>
+		<option value="disability">Disability</option>
+		<option value="franchise">Franchise</option>
+		<option value="main">Main</option>
+		<option value="primary">Primary</option>
+		<option value="seasonal">Seasonal</option>
+		<option value="secondary">Secondaty Impact</option>
+		<option value="social">Social</option>
+		<option value="groupother">Other</option>
+	</select>
+	<lable id="groups-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>	
+	</br></br>	
+	<lable>If other, please specify :</lable>
+	<input type="text" id="otherspecify" name="otherspecify" style="width:550px; height: 40px" required>
+    <lable id="otherspecify-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+    </br>
+    </br>
+    <lable>Business sector:</lable>
+    <select name="sector" required>
+		<option></option>
+		<option value="agri">Agriculture, hunting, forestry and fishing</option>
+		<option value="communication">Communication</option>
+		<option value="comminity">Community, social and personal services</option>
+		<option value="construction">Construction</option>
+		<option value="electricity">Electricity, gas and water supply</option>
+		<option value="finance">Financial intermediation, insurance, real-estate and business services</option>
+		<option value="hotels">Hotels & Accommodation</option>
+		<option value="ict">ICT/Telecommunication</option>
+		<option value="manufacturing">Manufacturing & assembly</option>
+		<option value="mining">Mining and quarrying</option>
+		<option value="profservices">Professional Services</option>
+		<option value="catering">Restaurants and Catering</option>
+		<option value="transport">Transport & Storage</option>
+		<option value="wholesale">Wholesale and retail trade</option>
+		<option value="other">Other</option>
+		
+	</select>
+    <lable id="sector-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+    </br></br>
+    <lable>If other, please specify:</lable>
+    </br>
+    <lable></lable>
+    <textarea rows="5" type="text" name="secortother" style="width:550px; "></textarea>
+    <lable id="sectorother-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+    </br></br>
+    <lable>Enterprise Street Address :</lable>
+    <input type="text" id="entaddress" name="entaddress" style="width:550px;" required>
+    <lable id="entaddress-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+    <br><br>
+    <lable>Town/City :</lable>
+    <input type="text" id="entcity" name="entcity">
+    <lable id="entcity-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+    <br><br>
+    <lable>Province :</lable>
+			  <select name="entprovince" required>
+			  <option></option>
+              <option value="Gauteng">Gauteng</option>
+			  <option value="Mpumalanga">Mpumalanga</option>
+			  <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+			  <option value="North West">North West</option>
+			  <option value="Limpopo">	Limpopo</option>
+			  <option value="Western Cape">Western Cape</option>
+			  <option value="Free State">Free State</option>
+			  <option value="Eastern Cape">Eastern Cape</option>
+			  <option value="Northern Cape">Northern Cape</option>
+			  </select>
+    <lable id="entprovince-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+    </br></br>
+    <lable>Enterprise Contact Number :</lable>
+    <input type="text" id="entnumber" name="entnumber" style="width:550px;" required>
+    <lable id="entnumber-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+    </br></br>
+    <lable>Enterprise email address :</lable>
+    <input type="text" id="entemail" name="entemail" style="width:550px;"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="example@business.com">
+    <lable id="entemail-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+    </br></br>
+    <lable>Enterprise website :</lable>
+    <input type="text" id="entweb" name="entweb" style="width:550px;" placeholder="https://" requirede>
+    <lable id="entweb-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+	</br></br>
+    <lable>Please list your social media handles :</lable>
+    <input type="text" id="entmedia" name="entmedia" style="width:550px;" required>
+    <lable id="entmedia-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+    </br></br>
+    <lable>How long has the enterprise been operational?</lable>
+    <input type="number" id="entperiod" name="entperiod" style="width:550px;" required>
+    <lable id="entperiod-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+    </br></br>
+    <lable>When was the enterprise started?</lable>
+    <input type="date" id="entdatestarted" name="entdatestarted" style="width:550px;" required>
+    <lable id="entdatestarted-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+    </br></br>
+    <lable>What is your business registration number?</lable>
+    <input type="text" id="regnumber" name="regnumber" style="width:550px;" required>
+    <lable id="regnumber-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+</div>
+
+<!---------------------------------------------------------------------------------------------------------------------------------------SECTION 3 : Business overview ------->
+
+
+	<div id="tabs-3">
+		<lable style="width:700px;">Provide a short overview of the enterprise(what,where,why,who,how,etc) :</lable>
+		<br>
+	    <textarea rows="5" type="text" id="overview" name="overview" style="width:825px;"></textarea>
+		<lable id="regnumber-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+	    <br><br>
+		<div>
+        <lable style="width:400px;">What is the focus area of your product/service?</lable>
+		<lable id="cbx-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>	
+        <br>
+        <input type="checkbox" name="cbxskills">
+        <lable> Skills development</lable><br>
+        <input type="checkbox" name="cbxyouth">
+        <lable> Youth support</lable><br>
+        <input type="checkbox" name="cbxeducation">
+        <lable> Education And literacy</lable><br>
+        <input type="checkbox" name="cbxcommunity">
+        <lable>Community development</lable><br>
+        <input type="checkbox" name="cbxfemale">
+        <lable>Female empowerment and support</lable><br>
+        <input type="checkbox" name="cbxhealth">
+        <lable>Healthcare</lable><br>
+        <input type="checkbox" name="cbxjob">
+        <lable>Job creation</lable><br>
+		<input type="checkbox" name="cbxgoods">
+        <lable>Goods provision</lable><br>
+        <input type="checkbox" name="cbxhuman">
+        <lable>Human rights</lable><br>
+        <input type="checkbox" name="cbxenviromental">
+        <lable>Environmental sustainability and protection</lable><br>
+		<input type="checkbox" name="cbxelderly">
+        <lable>Elderly Support</lable><br>
+        <input type="checkbox" name="cbxother">
+        <lable>Other</lable><br>
+		
+        <br>
+        <lable style="width:825px;">If other, please specify :</lable><br>
+        <textarea rows="5" type="text" name="cbxotherspecify" style="width:825px; "></textarea>
+		<lable id="cbxother-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>	
+        <br><br>
+		</div>	
+        <lable style="width:825px;">Why did you start the enterprise?</lable><br>
+        <textarea rows="5" type="text" id="txtstart" name="txtstart" style="width:825px; " required></textarea>
+		<lable id="txtstart-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+        <br><br>
+        <lable style="width:825px;">Describe how your product or service contributes to solving or drivng social change?</lable><br>
+        <textarea rows="5" type="text" id="txtcontributes" name="txtcontributes" style="width:825px;" required></textarea>
+		<lable id="txtcontributes-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+        <br><br>
+        <lable style="width:825px;">In what way is your product/service unique or different?</lable><br>
+        <textarea rows="5" type="text" id="txtdifferent" name="txtdifferent" style="width:825px;" required></textarea>
+		<lable id="txtdifferent-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+        <br><br>
+        <lable style="width:825px;">At what stage of development is your product or service? </lable><br>
+        <textarea rows="5" type="number" id="txtstage" name="txtstage" style="width:825px; " required></textarea>
+		<lable id="txtstage-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+        <br><br>
+        <lable style="width:825px;">What evidence is there of the market potential for your product or service?(Research,testing,examples)</lable><br>
+        <textarea rows="5" type="text" id="txtevidence" name="txtevidence" style="width:825px;" required></textarea>
+		<lable id="txtevidence-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+        <br><br>
+        <lable style="width:850px;">What is the commercial model for the enterprise-who will buy your product/services,how will you make money? </lable><br>
+        <textarea rows="5" type="text" id="txtcommercial" name="txtcommercial" style="width:825px;" required></textarea>
+		<lable id="txtcommercial-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+        <br><br>
+        <lable style="width:850px;">What is needed for your product or service to be successful?</lable><br>
+        <textarea rows="5"type="text" id="txtneeds" name="txtneeds" style="width:825px;" required></textarea>
+		<lable id="txtneeds-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+        <br><br>
+        <lable style="width:850px;">What are the STRENGTHS of the enterprise?</lable><br>
+        <textarea rows="5"type="text" id="txtstrengths" name="txtstrengths" style="width:825px;" required></textarea>
+		<lable id="txtstrengths-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+        <br><br>
+        <lable style="width:850px;">What are the WEAKNESSES of the enterprise?</lable><br>
+        <textarea rows="5" type="text" id="txtweakness" name="txtweakness" style="width:825px; " required></textarea>
+		<lable id="txtweakness-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+        <br><br> 
+        <lable style="width:850px;">What progress or successes have been made since the enterprise was started?</lable><br>
+        <textarea rows="5" type="text" id="txtprogress" name="txtprogress" style="width:825px;" required></textarea>
+		<lable id="txtprogress-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+        <br><br>
+        <lable style="width:850px;">What Challenges are you facing right now and how will you overcome them?</lable><br>
+        <textarea rows="5" type="text" id="txtchallenges" name="txtchallenges" style="width:825px;" required></textarea>
+		<lable id="txtchallenges-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+		<br><br>
+        <lable style="width:850px;"> Where do you see your enterprise in the next five years and how will you achieve these goals? </lable><br>
+        <textarea rows="5" type="text" id="txtgoals" name="txtgoals" style="width:825px;" required></textarea>
+		<lable id="txtgoals-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+        <br><br>
+        <lable style="width:600px;"> List your top three clients and indicate the value of the largest order:</lable>
+		<lable id="clients-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+		<br><br>
+		<table name="clients">
+		  <tbody><tr>
+			<th></th>  
+			<th>Client Name</th>
+			<th>Value (i.e. kg/liter)</th>	
+			<th>Product/Service</th>
+			<th>Amount</th>
+		  </tr>
+		  <tr>
+			<td>Order 1 </td>
+			<td><input type="text" id="clientname1" name="clientname1" required></td>
+			<td><input type="text" id="value1" name="value1" required></td>
+			<td><input type="text" id="product1" name="product1" required></td>
+			<td><input type="text" id="amount1" name="amount1" required></td>
+		  </tr>
+		  <tr>
+			<td>Order 2 </td>
+			<td><input type="text" id="clientname2" name="clientname2" required></td>
+			<td><input type="text" id="value2" name="value2" required></td>
+			<td><input type="text" id="product2" name="product2" required></td>
+			<td><input type="text" id="amount2" name="amount2" required></td>
+		  </tr>
+		  <tr>
+			<td>Order 3 </td>
+			<td><input type="text" id="clientname3" name="clientname3" required></td>
+			<td><input type="text" id="value3" name="value3" required></td>
+			<td><input type="text" id="product3" name="product3" required></td>
+			<td><input type="text" id="amount3" name="amount3" required></td>
+			  
+		  </tr>	
+			  
+		</tbody></table>
+		
+        <br><br>
+        <lable style="width:825px;"> Do you rely on one key supplier or are you able to source your product/service inputs from a variety of suppliers? Please explain.</lable>
+        <br>
+        <textarea rows="5" type="text" id="txtsource" name="txtsource" style="width:825px;" required></textarea>
+        <lable id="txtsource-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+		</div>
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------------SECTION 4 : Employment details ---------->
+
+
+	<div id="tabs-4">
+		<label style="width:825px;"> What experience, qualifications, and skills do you (and your leadership team) have that contribute to the success of the enterprise?</lable><br>
+		<textarea rows="5" type="text" id="txtexperience" name="txtexperience" style="width:825px;" required></textarea>
+		<lable id="txtexperience-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+		</br></br>
+		<lable style="width:500px;"> How many people are currently employed in the enterprise?</lable>
+        <lable id="employees-error"><font style="font-size:11px;color:green;font-weight: bold"> *Field Required</font></lable>
+        <br><br>
+	    <table>
+		  <tr>
+			<th></th>  
+			<th>Males</th>
+			<th>Females</th>
+			<th>Youth(>35)</th>
+		  </tr>
+		  <tr>
+			<td>Full-time employees</td>
+			<td><input type="text" id="ftmale" name="ftmale"></td>
+			<td><input type="text" id="ftfemale" name="ftfemale"></td>
+			<td><input type="text" id="ftyouth" name="ftyouth"></td>
+	
+		  </tr>
+		  <tr>
+			<td>Part-time employees </td>
+			<td><input type="text" id="ptmale" name="ptmale"></td>
+			<td><input type="text" id="ptfemale" name="ptfemale"></td>
+			<td><input type="text" id="ptyouth" name="ptyouth"></td>
+			
+		  </tr>
+		  <tr>
+			<td>Casual staff</td>
+			<td><input type="text" id="csmale" name="csmale"></td>
+			<td><input type="text" id="csfemale" name="csfemale"></td>
+			<td><input type="text" id="csyouth" name="csyouth"></td>
+			
+		  </tr>	
+		</table>
+        <br><br>
+	
+	    <lable style="width:825px;"> Please provide shareholder details, including their percentage:</lable>
+       
+        <br><br>
+	    <table>
+		  <tr>
+			<th></th>  
+			<th>Full Names</th>
+			<th>ID Number </th>
+			<th>Postition</th>
+			<th>Ethnicity</th>
+			<th>Gender</th>
+			<th>Ownership percentage</th>
+		  </tr>
+		  <tr>
+			<td>Shareholder 1</td>
+			<td><input type="text" id="name1" name="name1"></td>
+			<td><input type="text" id="id1" name="id1"></td>
+			<td><input type="text" id="position1" name="position1"></td>
+			<td>
+			  <select name="ethnicity1">
+			    <option value=""></option>
+				<option value="black">Black</option>
+				<option value="white">White</option>
+			    <option value="coloured">Coloured</option>
+				<option value="indian">Indian/Asian</option>
+		      </select>
+			 </td>
+			<td>
+				<select name="gender1">
+				<option></option>	
+				<option value="male" >Male</option>
+				<option value="female">Female</option>  
+		  
+				</select>				
+			</td>
+			<td><input type="text" id="ownpct1" name="ownpct1"></td>
+	
+		  </tr>
+		  <tr>
+			<td>Shareholder 2 </td>
+			<td><input type="text" id="name2" name="name2"></td>
+			<td><input type="text" id="id2" name="id2"></td>
+			<td><input type="text" id="" name="position2"></td>
+			<td>
+				<select name="ethnicity2">
+			    <option value=""></option>
+				<option value="black">Black</option>
+				<option value="white">White</option>
+			    <option value="coloured">Coloured</option>
+				<option value="indian">Indian/Asian</option>
+		  </select>  
+			</td>
+			<td>
+				<select name="gender2">
+				<option></option>	
+				<option value="male" >Male</option>
+				<option value="female">Female</option>  
+		  
+				</select>				
+			</td>
+			<td><input type="text" id="" name="ownpct2"></td>
+			
+		  </tr>
+		  <tr>
+			<td>Shareholder 3 </td>
+			<td><input type="text" id="name3" name="name3"></td>
+			<td><input type="text" id="id3" name="id3"></td>
+			<td><input type="text" id="postioion3" name="position3"></td>
+			<td>
+			  <select name="ethnicity3">
+			    <option value=""></option>
+				<option value="black">Black</option>
+				<option value="white">White</option>
+			    <option value="coloured">Coloured</option>
+				<option value="indian">Indian/Asian</option>
+		  </select>
+			</td>
+			<td>
+				<select name="gender3">
+				<option></option>	
+				<option value="male" >Male</option>
+				<option value="female">Female</option>  
+		  
+				</select>				
+			</td>
+			<td><input type="text" id="" name="ownpct3"></td>
+			
+		  </tr>
+		<tr>
+			<td>Shareholder 4 </td>
+			<td><input type="text" id="name4" name="name4"></td>
+			<td><input type="text" id="id4" name="id4"></td>
+			<td><input type="text" id="position4" name="position4"></td>
+			<td>
+				<select name="ethnicity4">
+			    <option value=""></option>
+				<option value="black">Black</option>
+				<option value="white">White</option>
+			    <option value="coloured">Coloured</option>
+				<option value="indian">Indian/Asian</option>
+		  </select>
+			</td>
+			<td>
+				<select name="gender4">
+				<option></option>		
+				<option value="male" >Male</option>
+				<option value="female">Female</option>  
+		  
+				</select>				
+			</td>
+			<td><input type="text" id="" name="ownpct4"></td>
+			
+		  </tr>
+		<tr>
+			<td>Shareholder 5 </td>
+			<td><input type="text" id="name5" name="name5"></td>
+			<td><input type="text" id="id5" name="id5"></td>
+			<td><input type="text" id="position5" name="position5"></td>
+			<td>
+				<select name="ethnicity5">
+			    <option value=""></option>
+				<option value="black">Black</option>
+				<option value="white">White</option>
+			    <option value="coloured">Coloured</option>
+				<option value="indian">Indian/Asian</option>
+		  </select>
+			</td>
+			<td>
+				<select name="gender5">
+				<option></option>	
+				<option value="male" >Male</option>
+				<option value="female">Female</option>  
+		  
+				</select>				
+			</td>
+			<td><input type="text" id="ownpct5" name="ownpct5"></td>
+			
+		  </tr>	
+			
+		</table>
+        </br>
+        
+		<input type="Submit" text="Submit" id="btnsubmit" name="btnsubmit"></form>
+</div>
+
+</form>
+
+
+<script src="css/external/jquery/jquery.js"></script>
+<script src="css/jquery-ui.js"></script>
+<script>
+
+$( "#accordion" ).accordion();
+
+
+
+var availableTags = [
+	"ActionScript",
+	"AppleScript",
+	"Asp",
+	"BASIC",
+	"C",
+	"C++",
+	"Clojure",
+	"COBOL",
+	"ColdFusion",
+	"Erlang",
+	"Fortran",
+	"Groovy",
+	"Haskell",
+	"Java",
+	"JavaScript",
+	"Lisp",
+	"Perl",
+	"PHP",
+	"Python",
+	"Ruby",
+	"Scala",
+	"Scheme"
+];
+$( "#autocomplete" ).autocomplete({
+	source: availableTags
+});
+
+
+
+$( "#button" ).button();
+$( "#button-icon" ).button({
+	icon: "ui-icon-gear",
+	showLabel: false
+});
+
+
+
+$( "#radioset" ).buttonset();
+
+
+
+$( "#controlgroup" ).controlgroup();
+
+
+
+$( "#tabs" ).tabs();
+
+
+
+$( "#dialog" ).dialog({
+	autoOpen: false,
+	width: 400,
+	buttons: [
+		{
+			text: "Ok",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		},
+		{
+			text: "Cancel",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		}
+	]
+});
+
+// Link to open the dialog
+$( "#dialog-link" ).click(function( event ) {
+	$( "#dialog" ).dialog( "open" );
+	event.preventDefault();
+});
+
+
+
+$( "#datepicker" ).datepicker({
+	inline: true
+});
+
+
+
+$( "#slider" ).slider({
+	range: true,
+	values: [ 17, 67 ]
+});
+
+
+
+$( "#progressbar" ).progressbar({
+	value: 20
+});
+
+
+
+$( "#spinner" ).spinner();
+
+
+
+$( "#menu" ).menu();
+
+
+
+$( "#tooltip" ).tooltip();
+
+
+
+$( "#selectmenu" ).selectmenu();
+
+
+// Hover states on the static widgets
+$( "#dialog-link, #icons li" ).hover(
+	function() {
+		$( this ).addClass( "ui-state-hover" );
+	},
+	function() {
+		$( this ).removeClass( "ui-state-hover" );
+	}
+);
+</script>
+
+
+
+
+
+</body>
+</html>
